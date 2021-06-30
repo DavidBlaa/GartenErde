@@ -8,12 +8,12 @@
 
  $:{
 
-  console.log({searchTerm})
+   console.log({searchTerm})
 
    if(searchTerm)
    {
      //search species
-     filteredSpecies = $Species.filter(species => species.Name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()))
+     filteredSpecies = $Species.filter(species => species.Name.toLowerCase().includes(searchTerm.toLowerCase()))
    }
    else{
     filteredSpecies = [...$Species]
