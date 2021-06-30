@@ -2,12 +2,12 @@ import {writable} from 'svelte/store';
 
 export const hosturl = 'http://localhost:55683/'
 
-export const testArray = writable([]);
+export const Species = writable([]);
 
-const fetchTest = async () => {
- const url = hosturl +'api/testapi';
+const fetchSpecies = async () => {
+ const url = hosturl +'api/species';
  const res = await fetch(url);
- testArray.set(await res.json());
+ Species.set(await res.json());
 } 
 
-fetchTest();
+fetchSpecies();

@@ -1,6 +1,6 @@
 <script>
 
- import { testArray } from '../stores/store.js'
+
  import { Col, Container, Row } from 'sveltestrap';
 
 </script>
@@ -13,9 +13,7 @@
 <h1>Garten Erde</h1>
 <p>Anbau in Harmonie mit der Natur.</p>
 
-{#each $testArray as item}
- <b>{item}</b>
-{/each}
+
 
 <Container>
  <Row>

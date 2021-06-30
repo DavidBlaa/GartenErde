@@ -6,5 +6,5 @@
 </head>
 
 <Nav/>
-
+<br/>
 <slot></slot>
