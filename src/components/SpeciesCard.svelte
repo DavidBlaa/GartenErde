@@ -16,8 +16,7 @@ export let Species;
 
 </script>
 
-
- <div class="SpeciesCardContainer">
+<a href="/species/{Species.Type}_{Species.Id}" > <div class="SpeciesCardContainer">
   <Card>
    <CardHeader>
      <CardTitle>{Species.Name}</CardTitle>
@@ -34,16 +33,23 @@ export let Species;
 
    </CardBody>
    <CardFooter>
-    <a href="/species/${Species.Id}" >details</a>
+    {Species.Type}
    </CardFooter>
   </Card>
  </div>
+</a>
+
 
 
 
 <style >
  .SpeciesCardContainer{
   margin: 10px 0;
+ }
+
+ a, a:visited, a:hover, a:active  {
+  text-decoration: none;
+  color:darkslategrey;
  }
 
 </style>

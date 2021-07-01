@@ -5,6 +5,7 @@
 
  let searchTerm="";
  let filteredSpecies=[];
+ $: count = 0;
 
  $:{
 
@@ -19,18 +20,16 @@
     filteredSpecies = [...$Species]
    }
 
+   count = filteredSpecies.length;
  }
 
 </script>
 
-<svelte:head>
- <title>Garten Erde - Lexikon</title>
-</svelte:head>
-
-
-
 <Container>
  <Input type="search" name="search" id="SpeciesSearch" placeholder="search species" bind:value={searchTerm} />
+ <Row>
+  <p>Ergebnisse: {count} </p>
+ </Row>
  <Row>
  {#each filteredSpecies as o}
    <Col xs="12" md="4" xl="3"><SpeciesCard Species={o}/></Col>
