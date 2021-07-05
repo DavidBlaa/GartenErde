@@ -5,6 +5,7 @@ import { Container} from 'sveltestrap';
 import SpeciesPart from '../../components/species/SpeciesDetails.svelte'
 import Interactions from '../../components/comp/interactions.svelte';
 import Releationships from '../../components/comp/relationships.svelte';
+import LifeCycles from '../../components/comp/lifeCycles.svelte';
 import { TabContent, TabPane } from 'sveltestrap';
 
 
@@ -29,6 +30,9 @@ import { TabContent, TabPane } from 'sveltestrap';
     </TabPane>
     <TabPane tabId="Interactions" tab="Interaktionen" active>
      <Interactions {...species}/>
+    </TabPane>
+    <TabPane tabId="Lebenszyklus" tab="Lebenszyklus">
+        <LifeCycles {...species} /> 
     </TabPane>
 </TabContent>
 </Container>
