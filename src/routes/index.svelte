@@ -2,7 +2,13 @@
 
 
  import { Col, Container, Row } from 'sveltestrap';
-
+ import {
+    Card,
+    CardBody,
+    CardHeader,
+    CardText,
+    CardTitle
+  } from 'sveltestrap';
 </script>
 
 <svelte:head>
@@ -10,50 +16,65 @@
 </svelte:head>
 
 
-<h1>Garten Erde</h1>
-<p>Anbau in Harmonie mit der Natur.</p>
+
 
 
 
 <Container>
+
+<h1>Garten Erde</h1>
+<p>Anbau in Harmonie mit der Natur.</p>
+
  <Row>
    <Col>
-     <div>
-      <h2><span class="fa fa-book"></span>   Lexikon</h2>
-      <br />
-      <p class="text-justify">
+    <Card class="mb-3">
+      <CardHeader>
+        <CardTitle>Lexikon</CardTitle>
+      </CardHeader>
+      <CardBody>
+        <CardText>
           Nachschlagewerk für Nutzplfanzen und Lebenwesen. Die Filtermöglichkeiten beziehen sich neben Name auch auf Interkationen,
           Zeiten und Beflanzungseigenschaften.
-      </p>
-    </div>
+        </CardText>
+      </CardBody>
+    </Card>
    </Col>
    <Col>
-     <div >
-      <h2><span class="fa fa-calendar"></span>  Saisonkalendar</h2>
-      <br />
-      <p class="text-justify">
+    <Card class="mb-3">
+      <CardHeader>
+        <CardTitle>Saisonkalendar</CardTitle>
+      </CardHeader>
+      <CardBody>
+        <CardText>
           Wann wird welches Gemüse angepflanzt oder geerntet? Hier findest du einen Überblick.
-      </p>
-    </div>
+        </CardText>
+      </CardBody>
+    </Card>
    </Col>
    <Col>
-    <div >
-       <h2><span class="fa fa-cubes"></span> Gartenplaner</h2>
-       <br />
-       <p class="text-justify">
-           Im Bezug auf Mischkultur hilft der Gartenplaner bei der Bepflanzung.
-       </p>
-   </div>
+   <Card class="mb-3">
+    <CardHeader>
+      <CardTitle>Gartenplaner</CardTitle>
+    </CardHeader>
+    <CardBody>
+      <CardText>
+        Im Bezug auf Mischkultur hilft der Gartenplaner bei der Bepflanzung.
+      </CardText>
+    </CardBody>
+  </Card>
   </Col>
    <Col>
-    <div>
-     <h2><span class="fa fa-share-alt-square"></span> Beziehungskiste</h2>
-     <br />
-     <p class="text-justify">
-         Es gibt viele Möglichkeiten Pflanzen, bei der Positionierung auf einem Beet, zu kombinieren.
+    <Card class="mb-3">
+      <CardHeader>
+        <CardTitle>Beziehungskiste</CardTitle>
+      </CardHeader>
+      <CardBody>
+        <CardText>
+          Es gibt viele Möglichkeiten Pflanzen, bei der Positionierung auf einem Beet, zu kombinieren.
          Manche sind gut und mansche sind schlecht. Hier findest du eine Übersicht über die hier genannten Interaktion.
-     </p>
-    </div>
+        </CardText>
+      </CardBody>
+    </Card>
    </Col>
  </Row>
 </Container>

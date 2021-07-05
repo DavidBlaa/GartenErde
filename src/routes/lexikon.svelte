@@ -1,6 +1,6 @@
 <script>
  import { Species } from '../stores/store.js'
- import SpeciesCard from '../components/SpeciesCard.svelte'
+ import SpeciesCard from '../components/species/SpeciesCard.svelte'
  import { Col, Container, Row, Input } from 'sveltestrap';
 
  let searchTerm="";

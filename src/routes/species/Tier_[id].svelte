@@ -1,6 +1,10 @@
 <script context="module">
  import {hosturl} from '../../stores/store.js'
  import { Container} from 'sveltestrap';
+ import SpeciesPart from '../../components/species/SpeciesDetails.svelte'
+ import Interactions from '../../components/comp/interactions.svelte';
+import { TabContent, TabPane } from 'sveltestrap';
+
 
  export async function load({page}){
      const id = page.params.id;
@@ -14,11 +18,12 @@
 <script>
  export let species
 </script>
+
+<SpeciesPart {species} />
 <Container>
-
-<h1>{species.Name}</h1>
-
-<p>{species.Description}</p>
-<p>{species.Type}</p>
-
+<TabContent pills >
+    <TabPane tabId="Interactions" tab="Interaktionen" active>
+     <Interactions interactions={species.Interactions}/>
+    </TabPane>
+</TabContent>
 </Container>
