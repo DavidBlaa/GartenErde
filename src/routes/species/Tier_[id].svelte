@@ -1,8 +1,10 @@
 <script context="module">
- import {hosturl} from '../../stores/store.js'
- import { Container} from 'sveltestrap';
- import SpeciesPart from '../../components/species/SpeciesDetails.svelte'
- import Interactions from '../../components/comp/interactions.svelte';
+
+import {hosturl} from '../../stores/store.js'
+import { Container} from 'sveltestrap';
+import SpeciesPart from '../../components/species/SpeciesDetails.svelte'
+import Interactions from '../../components/comp/interactions.svelte';
+import Releationships from '../../components/comp/relationships.svelte';
 import { TabContent, TabPane } from 'sveltestrap';
 
 
@@ -19,11 +21,14 @@ import { TabContent, TabPane } from 'sveltestrap';
  export let species
 </script>
 
-<SpeciesPart {species} />
+<SpeciesPart {...species} />
 <Container>
 <TabContent pills >
+    <TabPane tabId="Beziehung" tab="Beziehung">
+        <Releationships {...species}/>
+    </TabPane>
     <TabPane tabId="Interactions" tab="Interaktionen" active>
-     <Interactions interactions={species.Interactions}/>
+     <Interactions {...species}/>
     </TabPane>
 </TabContent>
 </Container>

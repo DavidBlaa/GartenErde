@@ -13,23 +13,27 @@ import {
 
 import {fade} from 'svelte/transition';
 
-export let Species;
+export let Id;
+export let Type;
+export let Name;
+export let ScientificName;
+export let Description;
 
 
 </script>
 
-<a href="/species/{Species.Type}_{Species.Id}" > <div class="SpeciesCardContainer" transition:fade>
+<a href="/species/{Type}_{Id}" > <div class="SpeciesCardContainer" transition:fade>
   <div>
   <Card>
    <CardHeader>
-     <CardTitle>{Species.Name}</CardTitle>
+     <CardTitle>{Name}</CardTitle>
    </CardHeader>
    <CardBody>
-     <CardSubtitle>{Species.ScientificName}</CardSubtitle>
+     <CardSubtitle>{ScientificName}</CardSubtitle>
      <CardText>
       <p>
       <br/>
-      {Species.Description}
+      {Description}
      </p>
      </CardText>
 

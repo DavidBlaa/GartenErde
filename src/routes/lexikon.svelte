@@ -32,7 +32,7 @@
  </Row>
  <Row>
  {#each filteredSpecies as o}
-   <Col xs="12" md="4" xl="3"><SpeciesCard Species={o}/></Col>
+   <Col xs="12" md="4" xl="3"><SpeciesCard {...o}/></Col>
  {/each}
 </Row>
 </Container>

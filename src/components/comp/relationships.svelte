@@ -4,22 +4,20 @@
 
  import Link from './simpleLink.svelte'
  
- export let parent;
- export let children=[];
+ export let Parent;
+ export let Children=[];
  
  </script>
  
- 
- {#if parent}
+ {#if Parent}
   <b>Eltern</b> 
-  <SimpleParent node={parent} />
+  <SimpleParent node={Parent} />
  {/if}
  
- {#if children.length>0}
+ {#if Children.length>0}
  <h5>Kinder</h5>
- {#each children as child}
+ {#each Children as child}
  <p><Link node={child}/> ({child.Type})</p>
-
  {/each}
  {/if }
  

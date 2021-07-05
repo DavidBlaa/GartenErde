@@ -1,24 +1,27 @@
 <script>
-import { children } from 'svelte/internal';
 import { Container} from 'sveltestrap';
-import Relationships from '../../components/comp/relationships.svelte';
-import Releationships from '../../components/comp/relationships.svelte';
 
-export let species;
+
+
+export let Name;
+export let ScientificName;
+export let Type;
+export let TaxonRank;
+export let Description;
 
 </script>
 
 <Container>
 
- <h1>{species.Name}</h1>
- <h2>{species.ScientificName}</h2>
- <p>Type: <b>{species.Type}</b></p>
+ <h1>{Name}</h1>
+ <h2>{ScientificName}</h2>
+ <p>Type: <b>{Type}</b></p>
  
- <p>Taxon: <b>{species.TaxonRank}</b></p>
+ <p>Taxon: <b>{TaxonRank}</b></p>
 
- <p>{species.Description}</p>
+ <p>{Description}</p>
 
- <Relationships parent={species.Parent} children={species.children}/>
+ 
 
  </Container>
 

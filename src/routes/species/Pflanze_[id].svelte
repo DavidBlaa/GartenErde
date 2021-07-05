@@ -6,6 +6,7 @@ import { Container} from 'sveltestrap';
 import Interactions from '../../components/comp/interactions.svelte';
 import Cultures from '../../components/comp/cultures.svelte';
 import PlantDetails from '../../components/comp/plant/plantdetails.svelte';
+import Releationships from '../../components/comp/relationships.svelte';
 import { TabContent, TabPane } from 'sveltestrap';
 
 export async function load({page}){
@@ -22,17 +23,20 @@ export async function load({page}){
 </script>
 
 <Container>
-<SpeciesPart {species}/>
+<SpeciesPart {...species}/>
 
 <TabContent pills >
     <TabPane tabId="Details" tab="Details" active>      
-        <PlantDetails plant={species} />
+        <PlantDetails {...species} />
+    </TabPane>
+    <TabPane tabId="Beziehung" tab="Beziehung">
+        <Releationships {...species}/>
     </TabPane>
     <TabPane tabId="Interactions" tab="Interaktionen">
-     <Interactions interactions={species.Interactions}/>
+     <Interactions {...species}/>
     </TabPane>
     <TabPane tabId="Cultures" tab="Kulturen">
-     <Cultures precultures={species.PreCultures} aftercultures={species.AfterCultures} /> 
+     <Cultures {...species} /> 
     </TabPane>
 </TabContent>
 </Container>

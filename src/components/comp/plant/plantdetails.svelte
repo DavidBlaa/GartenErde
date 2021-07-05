@@ -1,33 +1,38 @@
 <script>
 import {  Container, Row, Col } from 'sveltestrap';
 
-export let plant;
+export let Width;
+export let Height;
+export let RootDepth;
+export let NutrientClaim;
+export let LocationType;
+export let SowingDepth;
 
 </script>
 
 <Container>
 <Row>
  <Col>Breite</Col>
- <Col>{plant.Width}</Col>
+ <Col>{Width}</Col>
 </Row>
 <Row>
  <Col>Tiefe</Col>
- <Col>{plant.Height}</Col>
+ <Col>{Height}</Col>
 </Row>
 <Row>
  <Col>Wurzeltiefe</Col>
- <Col>{plant.RootDepth}</Col>
+ <Col>{RootDepth}</Col>
 </Row>
 <Row>
  <Col>Nähstoff Anspruch</Col>
- <Col>{plant.NutrientClaim}</Col>
+ <Col>{NutrientClaim}</Col>
 </Row>
 <Row>
  <Col>Standort</Col>
- <Col>{plant.LocationType}</Col>
+ <Col>{LocationType}</Col>
 </Row>
 <Row>
  <Col>Sähtiefe</Col>
- <Col>{plant.SowingDepth}</Col>
+ <Col>{SowingDepth}</Col>
 </Row>
 </Container>

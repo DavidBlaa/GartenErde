@@ -2,7 +2,7 @@
 import { Table, Container } from 'sveltestrap';
 import Link from './simpleLink.svelte'
 
-export let interactions;
+export let Interactions;
 
 </script>
 
@@ -19,7 +19,7 @@ export let interactions;
  </thead>
  <tbody>
   
-{#each interactions as interaction}
+{#each Interactions as interaction}
  
 <tr>
   <td><Link node={interaction.Subject}/></td>
