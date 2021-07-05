@@ -1,11 +1,12 @@
 <script>
-import { Table } from 'sveltestrap';
+import { Table, Container } from 'sveltestrap';
 import Link from './simpleLink.svelte'
 
 export let interactions;
 
 </script>
 
+<Container>
 <Table>
  <thead>
    <tr>
@@ -31,3 +32,4 @@ export let interactions;
 {/each}
 </tbody>
 </Table>
+</Container>

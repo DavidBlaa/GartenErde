@@ -1,5 +1,8 @@
 <script>
+import { children } from 'svelte/internal';
 import { Container} from 'sveltestrap';
+import Relationships from '../../components/comp/relationships.svelte';
+import Releationships from '../../components/comp/relationships.svelte';
 
 export let species;
 
@@ -14,6 +17,8 @@ export let species;
  <p>Taxon: <b>{species.TaxonRank}</b></p>
 
  <p>{species.Description}</p>
+
+ <Relationships parent={species.Parent} children={species.children}/>
 
  </Container>
 

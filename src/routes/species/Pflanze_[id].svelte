@@ -5,6 +5,7 @@ import SpeciesPart from '../../components/species/SpeciesDetails.svelte'
 import { Container} from 'sveltestrap';
 import Interactions from '../../components/comp/interactions.svelte';
 import Cultures from '../../components/comp/cultures.svelte';
+import PlantDetails from '../../components/comp/plant/plantdetails.svelte';
 import { TabContent, TabPane } from 'sveltestrap';
 
 export async function load({page}){
@@ -24,7 +25,10 @@ export async function load({page}){
 <SpeciesPart {species}/>
 
 <TabContent pills >
-    <TabPane tabId="Interactions" tab="Interaktionen" active>
+    <TabPane tabId="Details" tab="Details" active>      
+        <PlantDetails plant={species} />
+    </TabPane>
+    <TabPane tabId="Interactions" tab="Interaktionen">
      <Interactions interactions={species.Interactions}/>
     </TabPane>
     <TabPane tabId="Cultures" tab="Kulturen">
