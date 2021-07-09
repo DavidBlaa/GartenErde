@@ -21,6 +21,8 @@
    }
 
    count = filteredSpecies.length;
+
+   console.log({filteredSpecies})
  }
 
 </script>

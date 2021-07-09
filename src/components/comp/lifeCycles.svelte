@@ -10,7 +10,7 @@ export let LifeCycles;
 
 
 {#each LifeCycles as lc}
-<hr>
+
 {#each lc as tp}
  <TimePeriod {...tp}/>
 {/each}

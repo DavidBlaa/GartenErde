@@ -12,7 +12,7 @@ import { TabContent, TabPane } from 'sveltestrap';
 
 export async function load({page}){
      const id = page.params.id;
-     const url = hosturl + 'api/plant/'+id.replace('$','')
+     const url = hosturl + '/api/plant/'+id.replace('$','')
      const res = await fetch(url);
      const species = await res.json();
      return {props:{species}}
@@ -23,11 +23,11 @@ export async function load({page}){
  export let species
 </script>
 
-<Container>
-<SpeciesPart {...species}/>
 
-<TabContent pills >
-    <TabPane tabId="Details" tab="Details" active>      
+<SpeciesPart {...species}/>
+<Container>
+<TabContent  >
+    <TabPane  tabId="Details" tab="Details" active>      
         <PlantDetails {...species} />
     </TabPane>
     <TabPane tabId="Beziehung" tab="Beziehung">
@@ -44,3 +44,5 @@ export async function load({page}){
     </TabPane>
 </TabContent>
 </Container>
+
+

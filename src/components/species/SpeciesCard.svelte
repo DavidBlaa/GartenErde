@@ -1,5 +1,8 @@
 <script>
 
+import {hosturl} from '../../stores/store.js'
+
+
 import {
     Button,
     Card,
@@ -18,20 +21,25 @@ export let Type;
 export let Name;
 export let ScientificName;
 export let Description;
+export let ImagePath;
+export let TaxonRank;
 
+$:imagePath = hosturl+ImagePath;
 
 </script>
 
 <a href="/species/{Type}_{Id}" > <div class="SpeciesCardContainer" transition:fade>
-  <div>
-  <Card>
+  <div class="{Type}">
+  <Card> 
+   <img src="{imagePath}" alt="{Name}" />
    <CardHeader>
      <CardTitle>{Name}</CardTitle>
    </CardHeader>
    <CardBody>
      <CardSubtitle>{ScientificName}</CardSubtitle>
      <CardText>
-      <p>
+      
+      <p class="description">
       <br/>
       {Description}
      </p>
@@ -39,7 +47,9 @@ export let Description;
 
    </CardBody>
    <CardFooter>
-    {Species.Type}
+    
+    {Type} - {TaxonRank}
+
    </CardFooter>
   </Card>
  </div>
@@ -63,4 +73,22 @@ export let Description;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
  }
 
+ img{
+   width: 100%;
+ }
+
+ .description{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+ }
+
+ .Pflanze{
+   color:forestgreen;
+ }
+ .Tier{
+   color:red;
+    }
 </style>

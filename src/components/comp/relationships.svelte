@@ -5,19 +5,23 @@
  import Link from './simpleLink.svelte'
  
  export let Parent;
- export let Children=[];
+ export let Childrens=[];
+ 
  
  </script>
- 
+ <Container>
  {#if Parent}
-  <b>Eltern</b> 
+  <b>Eltern</b> <br/>
   <SimpleParent node={Parent} />
  {/if}
  
- {#if Children.length>0}
+<br/>
+
+ {#if Childrens.length>0}
  <h5>Kinder</h5>
- {#each Children as child}
+ {#each Childrens as child}
  <p><Link node={child}/> ({child.Type})</p>
  {/each}
  {/if }
+</Container>
  
