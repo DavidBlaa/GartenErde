@@ -73,6 +73,8 @@ $:console.log($Stats);
      background-image: url("vladstudio_leaf_wallpaper.jpg");
      margin: auto;
      padding:40px;
+     border-radius: 5px;
+     margin-bottom: 20px;
 
  }
 

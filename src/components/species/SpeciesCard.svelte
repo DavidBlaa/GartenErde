@@ -24,12 +24,20 @@ export let Description;
 export let ImagePath;
 export let TaxonRank;
 
+
+export let Parent;
+export let Childrens;
+export let Interactions;
+export let LifeCycles;
+
+
 $:imagePath = hosturl+ImagePath;
+
 
 </script>
 
 <a href="/species/{Type}_{Id}" > <div class="SpeciesCardContainer" transition:fade>
-  <div class="{Type}">
+
   <Card> 
    <img src="{imagePath}" alt="{Name}" />
    <CardHeader>
@@ -47,12 +55,11 @@ $:imagePath = hosturl+ImagePath;
 
    </CardBody>
    <CardFooter>
-    
+    <p class="{Type}">
     {Type} - {TaxonRank}
-
+    </p >
    </CardFooter>
   </Card>
- </div>
 </a>
 
 <style>
@@ -86,9 +93,9 @@ $:imagePath = hosturl+ImagePath;
  }
 
  .Pflanze{
-   color:forestgreen;
+   background-color:forestgreen;
  }
  .Tier{
-   color:red;
+  background-color:red;
     }
 </style>

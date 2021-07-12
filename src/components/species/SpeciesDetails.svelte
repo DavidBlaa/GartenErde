@@ -11,12 +11,13 @@ export let TaxonRank;
 export let Description;
 export let Parent;
 export let ImagePath;
-
-$:imagePath = hosturl+ImagePath;
+let imagePath
 
 $:{
   console.log(Name +" - "+ImagePath)
   console.log(Id);
+
+  imagePath = hosturl+ImagePath;
 }
 
 

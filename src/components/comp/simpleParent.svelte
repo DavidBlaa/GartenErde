@@ -1,7 +1,7 @@
 <script>
  import { Icon } from 'sveltestrap';
  import Link from './simpleLink.svelte'
-export let node;
+ export let node;
 
 let parent = node.Parent
 
