@@ -12,6 +12,8 @@ import Statistic from '../components/comp/start/statistic.svelte'
 import Banner from '../components/comp/start/banner.svelte'
 import Topics from '../components/comp/start/topics.svelte'
 
+
+
 </script>
 
 <svelte:head>
