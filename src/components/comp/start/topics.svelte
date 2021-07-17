@@ -8,6 +8,8 @@
     CardTitle
   } from 'sveltestrap';
 
+import Icon from '../../layout/icon.svelte'
+
 </script>
 
 <Container>
@@ -15,7 +17,7 @@
    <Col>
     <Card class="mb-3">
       <CardHeader>
-        <CardTitle>Lexikon</CardTitle>
+        <CardTitle><Icon name="book"/> Lexikon</CardTitle>
       </CardHeader>
       <CardBody>
         <CardText>
@@ -28,7 +30,7 @@
    <Col>
     <Card class="mb-3">
       <CardHeader>
-        <CardTitle>Saisonkalendar</CardTitle>
+        <CardTitle> <Icon name="calendar"/> Saisonkalendar</CardTitle>
       </CardHeader>
       <CardBody>
         <CardText>
@@ -40,7 +42,7 @@
    <Col>
    <Card class="mb-3">
     <CardHeader>
-      <CardTitle>Gartenplaner</CardTitle>
+      <CardTitle><Icon name="cubes"/> Gartenplaner</CardTitle>
     </CardHeader>
     <CardBody>
       <CardText>
@@ -52,7 +54,7 @@
    <Col>
     <Card class="mb-3">
       <CardHeader>
-        <CardTitle>Beziehungskiste</CardTitle>
+        <CardTitle><Icon name="share-alt-square"/> Beziehungskiste</CardTitle>
       </CardHeader>
       <CardBody>
         <CardText>

@@ -2,7 +2,7 @@
 import { Table, Container } from 'sveltestrap';
 import Link from './simpleLink.svelte'
 
-export let Interactions;
+export let Interactions=[];
 
 </script>
 
