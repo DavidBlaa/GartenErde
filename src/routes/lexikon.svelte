@@ -23,7 +23,6 @@
 
    count = filteredSpecies.length;
 
-
  }
 
 function setFilterType()

@@ -1,7 +1,7 @@
 import {writable} from 'svelte/store';
 
-//export const hosturl = 'http://localhost:55683'
-export const hosturl = 'http://gartenerde.net:81'
+export const hosturl = 'http://localhost:55683'
+//export const hosturl = 'http://gartenerde.net:81'
 
 export const Species = writable([]);
 export const Stats = writable([]);
@@ -29,7 +29,7 @@ fetchStatistic();
 const fetchInteractions = async () => {
  const url = hosturl +'/api/interactions';
  const res = await fetch(url);
- Interactions.set(await res.json);
+ Interactions.set(await res.json());
 } 
 
 fetchInteractions();
