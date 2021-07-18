@@ -98,4 +98,10 @@ $:imagePath = hosturl+ImagePath;
  .Tier{
   background-color:red;
     }
+
+  .card-footer
+  {
+    background-color: darkviolet;
+
+  }
 </style>

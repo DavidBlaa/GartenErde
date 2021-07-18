@@ -23,9 +23,11 @@ $:{
 </script>
 <Container>
   <Row>
-    <Col sm={{ size: 3,  offset: 9 }} >
+    
+    <Col sm={{ size: 2}} >
       <Input type="search" name="search" id="interactionSearch" placeholder="Suche" bind:value={searchTerm} />
     </Col>
+    <Col sm=2 >Ergebnisse: {count}</Col>
   </Row>
 </Container>
 
