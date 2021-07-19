@@ -25,10 +25,10 @@ $:{
 
 <Container>
  <Row>
-  <Col>
+  <Col xs="auto">
    <img src="{imagePath}" alt="{Name}" class="img-thumbnail" />
   </Col>
-  <Col xs="10">
+  <Col xs="9">
    <h1>{Name}</h1>
    <h2>{ScientificName}</h2>
    <p>Type: <b>{Type}</b> Taxon: <b>{TaxonRank}</b></p>
@@ -51,5 +51,8 @@ $:{
     margin-top: 20px;
     margin-bottom: 10px;
 
+  }
+  img{
+    height: 100%;
   }
  </style>
