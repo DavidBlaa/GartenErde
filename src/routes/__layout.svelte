@@ -1,5 +1,6 @@
 <script>
  import Nav from '../components/layout/nav.svelte'
+ import Footer from '../components/layout/footer.svelte'
 </script>
 <head>
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
@@ -12,3 +13,5 @@
 <Nav/>
 <br/>
 <slot></slot>
+
+<Footer/>

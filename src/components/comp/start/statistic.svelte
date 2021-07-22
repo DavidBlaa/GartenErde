@@ -53,7 +53,7 @@ $:console.log($Stats);
 
       </div>
       <div class="stats-object-name">
-       Interaktionen
+       Beziehungen
       </div>
       <div class="stats-object-number">
           {$Stats.Interaktionen}

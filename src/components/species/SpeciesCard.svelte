@@ -39,11 +39,10 @@ $:imagePath = hosturl+ImagePath;
 <a href="/species/{Type}_{Id}" > <div class="SpeciesCardContainer" transition:fade>
 
   <Card> 
-   <img src="{imagePath}" alt="{Name}" />
-   <CardHeader>
-     <CardTitle>{Name}</CardTitle>
-   </CardHeader>
+   <img src="{imagePath}" alt="{Name}" class="card-img-top" />
+
    <CardBody>
+     <CardTitle>{Name}</CardTitle>
      <CardSubtitle>{ScientificName}</CardSubtitle>
      <CardText>
       
@@ -54,10 +53,10 @@ $:imagePath = hosturl+ImagePath;
      </CardText>
 
    </CardBody>
-   <CardFooter>
-    <p class="{Type}">
+   <CardFooter text-muted >
+    <span class="{Type}">
     {Type} - {TaxonRank}
-    </p >
+    </span >
    </CardFooter>
   </Card>
 </a>
@@ -93,15 +92,15 @@ $:imagePath = hosturl+ImagePath;
  }
 
  .Pflanze{
-   background-color:forestgreen;
+   /* background-color:forestgreen; */
  }
  .Tier{
-  background-color:red;
-    }
+  /* background-color:red; */
+  }
 
   .card-footer
   {
     background-color: darkviolet;
-
+    color:firebrick;
   }
 </style>
