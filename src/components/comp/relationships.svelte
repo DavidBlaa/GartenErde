@@ -11,14 +11,14 @@
  </script>
  <Container>
  {#if Parent}
-  <b>Eltern</b> <br/>
+  <b>Abstammung</b> <br/>
   <SimpleParent node={Parent} />
  {/if}
  
 <br/>
 
  {#if Childrens.length>0}
- <h5>Kinder</h5>
+ <b>Kinder</b>
  {#each Childrens as child}
  <p><Link node={child}/> ({child.Type})</p>
  {/each}
