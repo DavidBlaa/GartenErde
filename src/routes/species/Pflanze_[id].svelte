@@ -21,16 +21,26 @@ export async function load({page}){
 
 <script>
  export let species
+
+ let isVariety = false;
+ 
+ if(species.TaxonRank==="Unterart")
+ {
+    isVariety = true;
+ }
+
 </script>
 
 
 <SpeciesPart {...species}/>
 <Container>
-<TabContent  >
-    <TabPane  tabId="Details" tab="Details" active>      
+<TabContent >
+    {#if isVariety}
+    <TabPane  tabId="Details" tab="Details">      
         <PlantDetails {...species} />
     </TabPane>
-    <TabPane tabId="Beziehung" tab="Beziehung">
+    {/if}
+    <TabPane tabId="Beziehung" tab="Beziehung" active>
         <Releationships {...species}/>
     </TabPane>
     <TabPane tabId="Interactions" tab="Interaktionen">

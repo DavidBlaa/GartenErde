@@ -71,7 +71,7 @@ $:console.log($Stats);
  .stats-container {
      color: white;
      background-color: yellowgreen;
-     background-image: url("./vladstudio_leaf_wallpaper.jpg");
+     background-image: url("vladstudio_leaf_wallpaper.jpg");
      margin: auto;
      padding:40px;
      border-radius: 5px;
