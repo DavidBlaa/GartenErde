@@ -1,6 +1,7 @@
 <script>
 import { Stats } from '../../../stores/store.js'
-import { Col, Container, Row, Icon} from 'sveltestrap';
+import Icon from '../../layout/icon.svelte'
+import { Col, Container, Row} from 'sveltestrap';
 
 $:console.log($Stats);
 
@@ -11,52 +12,52 @@ $:console.log($Stats);
   <Col>
    <div class="stats-object">
       <div class="stats-object-icon">
-
+        <Icon name="seedling" title="Pflanzen"/>
       </div>
       <div class="stats-object-name">
-          Pflanzen
+          Sorten
       </div>
       <div class="stats-object-number">
-          {$Stats.Pflanzen}
+          {$Stats.Sorten}
       </div>
    </div>
   </Col>
   <Col>
    <div class="stats-object">
       <div class="stats-object-icon">
-
+        <Icon name="bug" title="Tiere"/>
       </div>
       <div class="stats-object-name">
        Tiere
       </div>
       <div class="stats-object-number">
-          {$Stats.Tiere}
+          {$Stats.TierArten}
       </div>
    </div>
   </Col>
   <Col>
+    <div class="stats-object">
+       <div class="stats-object-icon">
+         <Icon name="link" title="Beziehungen"/>
+       </div>
+       <div class="stats-object-name">
+        Beziehungen
+       </div>
+       <div class="stats-object-number">
+           {$Stats.Interaktionen}
+       </div>
+    </div>
+   </Col>
+  <Col>
    <div class="stats-object">
       <div class="stats-object-icon">
-
+        <Icon name="cubes" title="Gärten"/>
       </div>
       <div class="stats-object-name">
         Gärten
       </div>
       <div class="stats-object-number">
           {$Stats.Gärten}
-      </div>
-   </div>
-  </Col>
-  <Col>
-   <div class="stats-object">
-      <div class="stats-object-icon">
-
-      </div>
-      <div class="stats-object-name">
-       Beziehungen
-      </div>
-      <div class="stats-object-number">
-          {$Stats.Interaktionen}
       </div>
    </div>
   </Col>
@@ -70,7 +71,7 @@ $:console.log($Stats);
  .stats-container {
      color: white;
      background-color: yellowgreen;
-     background-image: url("vladstudio_leaf_wallpaper.jpg");
+     background-image: url("./vladstudio_leaf_wallpaper.jpg");
      margin: auto;
      padding:40px;
      border-radius: 5px;

@@ -23,7 +23,7 @@
 </script>
 
 <Navbar color="light" light expand="md">
- <NavbarBrand href="/"><Icon name="globe" title="Garten Erde"/> Garten Erde v0.1 </NavbarBrand>
+ <NavbarBrand href="/"><Icon name="globe-europe" title="Garten Erde"/> Garten Erde v0.1 </NavbarBrand>
  <NavbarToggler on:click={() => (isOpen = !isOpen)} />
  <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
    <Nav class="ms-auto" navbar>

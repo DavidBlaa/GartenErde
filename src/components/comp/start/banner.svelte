@@ -12,8 +12,9 @@
 
 <style>
  .head {
-     background-image: url("vladstudio_leaf_wallpaper.jpg");
+     background-image: url("./vladstudio_leaf_wallpaper.jpg");
      color: white;
+     background-color: yellowgreen;
      padding:10px;
      border-radius: 5px;
      margin-bottom: 20px;

@@ -8,18 +8,27 @@
  
  let Pflanze = true;
  let Tier = true;
+ let onlyArt = true;
+
  $: count = 0;
  $: filterTypes = [];
+ $: filterRank = [];
  $:{
 
    console.log({searchTerm})
    console.log({Pflanze})
    console.log({Tier})
+   console.log({onlyArt})
    
    filterTypes = setFilterType();
+   filterRank = setFilterRank();
+   console.log(filterRank)
 
    //search species
-   filteredSpecies = $Species.filter(species => filterTypes.includes(species.Type) && species.Name.toLowerCase().includes(searchTerm.toLowerCase()))
+   filteredSpecies = $Species.filter(species => 
+          filterTypes.includes(species.Type) && 
+          filterRank.includes(species.TaxonRank) && 
+          species.Name.toLowerCase().includes(searchTerm.toLowerCase()))
 
    count = filteredSpecies.length;
 
@@ -33,6 +42,28 @@ function setFilterType()
   //console.log(types);
 
   return types;
+}
+
+function setFilterRank()
+{
+  let ranks =[];
+
+  if(onlyArt) 
+  { 
+    ranks.push("Art");
+    ranks.push("Unterart");
+  }
+  else
+  {
+    ranks.push("Klasse");
+    ranks.push("Ordnung");
+    ranks.push("Familie");
+    ranks.push("Gattung");
+    ranks.push("Art");
+    ranks.push("Unterart");
+  }
+
+  return ranks;
 }
 
 
@@ -50,6 +81,9 @@ function setFilterType()
     </Col>
     <Col xs=auto>
       <Input id="Tier" type="checkbox" label="Tier" bind:checked={Tier} />
+    </Col>
+    <Col xs=auto>
+      <Input id="Art" type="checkbox" label="nur Arten/Sorten" bind:checked={onlyArt} />
     </Col>
  </Row>
  <Row>
