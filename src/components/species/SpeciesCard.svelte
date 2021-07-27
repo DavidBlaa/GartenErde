@@ -1,6 +1,7 @@
 <script>
 
 import {hosturl} from '../../stores/store.js'
+import Icon from '../layout/icon.svelte'
 
 
 import {
@@ -11,7 +12,9 @@ import {
     CardHeader,
     CardSubtitle,
     CardText,
-    CardTitle
+    CardTitle,
+    Row,
+    Col
   } from 'sveltestrap';
 
 import {fade} from 'svelte/transition';
@@ -30,13 +33,31 @@ export let Childrens;
 export let Interactions;
 export let LifeCycles;
 
+let iconName;
+
 
 $:imagePath = hosturl+ImagePath;
+
+setIconName();
+
+
+function setIconName()
+{
+  if(Type === "Pflanze"){
+    iconName = "seedling"
+  }
+  else if(Type === "Tier")
+  {
+    iconName = "bug"
+  }
+}
+
 
 
 </script>
 
-<a href="/species/{Type}_{Id}" > <div class="SpeciesCardContainer" transition:fade>
+<a href="/species/{Type}_{Id}" > 
+  <div class="SpeciesCardContainer" transition:fade>
 
   <Card> 
    <img src="{imagePath}" alt="{Name}" class="card-img-top" />
@@ -53,12 +74,18 @@ $:imagePath = hosturl+ImagePath;
      </CardText>
 
    </CardBody>
+   <div class="{Type}" >
    <CardFooter text-muted >
-    <span class="{Type}">
-    {Type} - {TaxonRank}
-    </span >
+    
+      <Row > 
+        <Col><Icon name="{iconName}" title="{Type}" /></Col>
+        <Col class="text-end" >{TaxonRank}</Col>
+      </Row>
+
    </CardFooter>
+  </div>
   </Card>
+  </div>
 </a>
 
 <style>
@@ -92,15 +119,13 @@ $:imagePath = hosturl+ImagePath;
  }
 
  .Pflanze{
-   /* background-color:forestgreen; */
+   border-bottom: yellowgreen 1px solid;
+   color: yellowgreen;
  }
+
  .Tier{
-  /* background-color:red; */
+    border-bottom: darkorange 1px solid;
+    color: darkorange;
   }
 
-  .card-footer
-  {
-    background-color: darkviolet;
-    color:firebrick;
-  }
 </style>

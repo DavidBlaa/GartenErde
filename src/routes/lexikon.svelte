@@ -70,8 +70,8 @@ function setFilterRank()
 </script>
 
 <Container>
- <Input type="search" name="search" id="SpeciesSearch" placeholder="search species" bind:value={searchTerm} />
- 
+ <Input type="search" name="search" id="SpeciesSearch" placeholder="Suche" bind:value={searchTerm} />
+ <div class="stats">
  <Row>
     <Col xs=auto>
       Ergebnisse: {count}
@@ -86,10 +86,19 @@ function setFilterRank()
       <Input id="Art" type="checkbox" label="nur Arten/Sorten" bind:checked={onlyArt} />
     </Col>
  </Row>
+</div>
  <Row>
- {#each filteredSpecies as o}
+ {#each filteredSpecies as o, i (o.Id)}
    <Col xs="12" md="4" xl="3"><SpeciesCard {...o}/></Col>
  {/each}
 </Row>
+
 </Container>
 
+<style>
+  .stats{
+    padding-left: 2px;;
+    padding-top:9px;
+    padding-bottom:5px;
+  }
+</style>
