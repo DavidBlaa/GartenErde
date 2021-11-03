@@ -2,7 +2,6 @@
 import { Container, Input, Row,Col } from 'sveltestrap';
 import { Interactions } from '../stores/store.js'
 import InteractionsComp from '../components/comp/interactions.svelte';
-import DT from '../components/comp/datatables.svelte'
 let filteredInteractions = []; 
 let count = 0; 
 let searchTerm="";
@@ -33,4 +32,3 @@ $:{
 
 <InteractionsComp bind:Interactions={filteredInteractions} />
 
-<!-- <DT/> -->

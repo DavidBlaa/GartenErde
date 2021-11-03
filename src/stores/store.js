@@ -6,6 +6,7 @@ export const hosturl = 'http://gartenerde.net:81'
 export const Species = writable([]);
 export const Stats = writable([]);
 export const Interactions = writable([]);
+export const Sources = writable([]);
 
 const fetchSpecies = async () => {
  const url = hosturl +'/api/species';
@@ -25,7 +26,6 @@ const fetchStatistic = async () => {
 
 fetchStatistic();
 
-
 const fetchInteractions = async () => {
  const url = hosturl +'/api/interactions';
  const res = await fetch(url);
@@ -33,3 +33,11 @@ const fetchInteractions = async () => {
 } 
 
 fetchInteractions();
+
+export const fetchSource = async () => {
+ const url = hosturl +'/api/source';
+ const res = await fetch(url);
+
+ Sources.set(await res.json());
+} 
+
